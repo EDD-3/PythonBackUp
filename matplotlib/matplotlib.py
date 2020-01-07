@@ -41,7 +41,6 @@ plt.show()
 """
 
 #Label axes
-"""
 x = range(12)
 y = [3000, 3005, 3010, 2900, 2950, 3050, 3000, 3100, 2980, 2980, 2920, 3010]
 plt.plot(x, y)
@@ -50,10 +49,8 @@ plt.xlabel('Time')
 plt.ylabel('Dollars spent on coffee')
 plt.title('My Last Twelve Years of Coffee Drinking')
 plt.show()
-"""
 
 #Subplots
-"""
 months = range(12)
 temperature = [36, 36, 39, 52, 61, 72, 77, 75, 68, 57, 48, 48]
 flights_to_hawaii = [1200, 1300, 1100, 1450, 850, 750, 400, 450, 400, 860, 990, 1000]
@@ -67,10 +64,9 @@ plt.plot(flights_to_hawaii, temperature, "o")
 plt.title('Temperature and months')
 
 plt.show() 
-"""
+
 
 #Subplot adjust
-"""
 x = range(7)
 straight_line = [0, 1, 2, 3, 4, 5, 6]
 parabola = [0, 1, 4, 9, 16, 25, 36]
@@ -87,10 +83,9 @@ plt.plot(x, cubic)
 
 plt.subplots_adjust(wspace=0.35, bottom=0.2)
 plt.show()
-"""
+
 
 #Modify x and y ticks
-"""
 month_names = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep","Oct", "Nov", "Dec"]
 
 months = range(12)
@@ -110,9 +105,8 @@ ax.set_yticks([0.10, 0.25, 0.5, 0.75])
 ax.set_yticklabels(["10%", "25%", "50%", "75%"])
 
 plt.show()
-"""
 
-""" 
+#Creating figures and modifying ticks, labels, title, 
 months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
 
 visits_per_month = [9695, 7909, 10831, 12942, 12495, 16794, 14161, 12762, 12777, 12439, 10309, 8724]
@@ -146,7 +140,7 @@ plt.subplots_adjust(wspace=0.40)
 plt.show()
 
 plt.savefig('visits_and_limes_per_year.png')
-"""
+
 
 #Display error as linear plot
 from matplotlib import pyplot as plt
