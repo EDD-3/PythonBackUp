@@ -3,8 +3,8 @@ from matplotlib import pyplot as plt
 x = [1997 + i for i in range(13)]
 y1 = [800 + i*100 for i in range(13)]
 y2 = [40 + i*10 for i in range(13)]
-plt.close('all')
 
+plt.close('all')
 plt.figure()
 plt.plot(x, y1, color='pink', marker='o')
 plt.plot(x, y2, color='gray', marker='o')
@@ -12,13 +12,11 @@ plt.title("Two Lines on One Graph")
 plt.xlabel("Amazing X-axis")
 plt.ylabel("Incredible Y-axis")
 plt.legend(['Math doctorates awarded','Uranium US power plants'], loc=4)
-
 plt.show()
 
 plt.savefig('plot_testing.png')
 
 #Change linear plot color and line style
-"""
 time = [0, 1, 2, 3, 4]
 revenue = [200, 400, 650, 800, 850]
 costs = [150, 500, 550, 550, 560]
@@ -26,10 +24,8 @@ costs = [150, 500, 550, 550, 560]
 plt.plot(time, revenue, color='purple', linestyle='--')
 plt.plot(time, costs, color='#82edc9', marker='s')
 plt.show()
-"""
 
 #Zoom on plot
-"""
 x = range(12)
 y = [3000, 3005, 3010, 2900, 2950, 3050, 3000, 3100, 2980, 2980, 2920, 3010]
 plt.plot(x, y)
@@ -38,7 +34,6 @@ plt.plot(x, y)
 plt.axis([0, 12, 2900, 3100])
 # .axis([x-min-value,x-max-value,y-min-value,y-max-value])
 plt.show()
-"""
 
 #Label axes
 x = range(12)
@@ -58,11 +53,9 @@ flights_to_hawaii = [1200, 1300, 1100, 1450, 850, 750, 400, 450, 400, 860, 990, 
 plt.subplot(1,2,1);
 plt.plot(months, temperature, color="green")
 plt.title('Temperature and months')
-
 plt.subplot(1,2,2);
 plt.plot(flights_to_hawaii, temperature, "o")
 plt.title('Temperature and months')
-
 plt.show() 
 
 
@@ -74,31 +67,25 @@ cubic = [0, 1, 8, 27, 64, 125, 216]
 
 plt.subplot(2,1,1)
 plt.plot(x, straight_line)
-
 plt.subplot(2,2,3)
 plt.plot(x, parabola)
-
 plt.subplot(2,2,4)
 plt.plot(x, cubic)
-
 plt.subplots_adjust(wspace=0.35, bottom=0.2)
 plt.show()
 
 
 #Modify x and y ticks
 month_names = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep","Oct", "Nov", "Dec"]
-
 months = range(12)
 conversion = [0.05, 0.08, 0.18, 0.28, 0.4, 0.66, 0.74, 0.78, 0.8, 0.81, 0.85, 0.85]
 
 plt.xlabel("Months")
 plt.ylabel("Conversion")
-
 plt.plot(months, conversion)
 
 # Your work here
 ax = plt.subplot()
-
 ax.set_xticks(months)
 ax.set_xticklabels(month_names)
 ax.set_yticks([0.10, 0.25, 0.5, 0.75])
@@ -108,7 +95,6 @@ plt.show()
 
 #Creating figures and modifying ticks, labels, title, 
 months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
-
 visits_per_month = [9695, 7909, 10831, 12942, 12495, 16794, 14161, 12762, 12777, 12439, 10309, 8724]
 
 # numbers of limes of different species sold each month
@@ -156,8 +142,6 @@ plt.fill_between(months,y_lower,y_upper,alpha=0.2)
 plt.plot(months,revenue)
 
 ax = plt.subplot()
-
 ax.set_xticks(months)
 ax.set_xticklabels(month_names)
-
 plt.show()

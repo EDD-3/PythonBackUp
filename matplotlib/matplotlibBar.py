@@ -6,9 +6,6 @@ sales =  [91, 76, 56, 66, 52, 27]
 plt.bar(range(len(drinks)), sales)
 
 #create your ax object here
-
-
-
 ax = plt.subplot()
 ax.set_xticks(range(len(drinks)))
 ax.set_xticklabels(drinks)
@@ -85,7 +82,48 @@ drinks = ["cappuccino", "latte", "chai", "americano", "mocha", "espresso"]
 ounces_of_milk = [6, 9, 4, 0, 9, 0]
 error = [0.6, 0.9, 0.4, 0, 0.9, 0]
 
-# Plot the bar graph here
 plt.bar(range(len(ounces_of_milk)),ounces_of_milk, yerr=error, capsize=5)
+
+plt.show()
+
+#histogram
+import codecademylib
+import csv
+from matplotlib import pyplot as plt
+from script import sales_times
+
+#create the histogram here
+def convert_time_to_num(time):
+  mins = int(time[-2:])
+  frac_of_hour = mins/60.0
+  hour = int(time[:-3])
+  time = hour + frac_of_hour
+  return time
+
+
+sales_times_raw = []
+with open('sales_times.csv') as csvDataFile:
+  csvReader = csv.reader(csvDataFile)
+  for row in csvReader:
+    sales_times_raw.append(row[2])
+  sales_times_raw = sales_times_raw[1:]
+
+sales_times = []
+for time in sales_times_raw:
+  sales_times.append(convert_time_to_num(time))
+  
+plt.hist(sales_times, bins=20)  
+
+plt.show()
+
+#Multiple histograms
+import codecademylib
+from matplotlib import pyplot as plt
+from script import sales_times1
+from script import sales_times2
+
+plt.hist(sales_times1, bins=20,alpha=0.4,normed=True)
+#plot your other histogram here
+plt.hist(sales_times2, bins=20,alpha=0.4,normed=True)
 
 plt.show()
